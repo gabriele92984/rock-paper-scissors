@@ -2,12 +2,13 @@
 
   // Create a new function named "getComputerChoice".
 
-  function getRandomInt(min, max) {
+  function getComputerChoice(min, max) {
     const minCeiled = Math.ceil(min);
     const maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+    return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
   }
-  console.log(getRandomInt(1, 4));
+  console.log(getComputerChoice(1, 3));
+  
 
   // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors".
   
