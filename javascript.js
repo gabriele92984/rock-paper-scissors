@@ -6,12 +6,12 @@
   }
 
   let computerChoice = getComputerChoice(3);
-  
+
   console.log(computerChoice)
 
   // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors".
   if (computerChoice === 0) {
-    computerChoice ="rock";
+    computerChoice = "rock";
   } else if (computerChoice === 1) {
     computerChoice = "paper";
   } else {
