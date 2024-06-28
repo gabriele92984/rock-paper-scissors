@@ -13,13 +13,17 @@
   // Test that the function returns what expected.
 
   let compChoiceResult = getComputerChoice();
-  console.log(compChoiceResult)
+  //console.log(compChoiceResult)
 
 
 // Write the logic to get the human choice
   // Create a new function named "getHumanChoice".
-
-
+  function getHumanChoice() {
+    let text;
+    text = prompt("Welcome to rock-paper-scissors game! Please make your choice:");
+      console.log(text)
+  }
+  getHumanChoice();
 
   // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs.
 
