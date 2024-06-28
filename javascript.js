@@ -1,23 +1,28 @@
 // Write the logic to get the computer choice.
-
   // Create a new function named "getComputerChoice".
-  function getComputerChoice(max) {
-    return Math.floor(Math.random() * max);
+  function getComputerChoice() {
+
   }
-
-  let computerChoice = getComputerChoice(3);
-
-  console.log(computerChoice)
 
   // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors".
-  if (computerChoice === 0) {
-    computerChoice = "rock";
-  } else if (computerChoice === 1) {
-    computerChoice = "paper";
-  } else {
-    computerChoice = "scissors"
+  function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    return choices[Math.floor(Math.random() * choices.length)];
   }
-
-  console.log(computerChoice)
-
+  
   // Test that the function returns what expected.
+
+  let compChoiceResult = getComputerChoice();
+  console.log(compChoiceResult)
+
+
+// Write the logic to get the human choice
+  // Create a new function named "getHumanChoice".
+
+
+
+  // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs.
+
+
+
+  // Test what your function returns by using "console.log".
