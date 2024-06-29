@@ -25,14 +25,27 @@
 
 // Write the logic to get the human choice
   // Create a new function named "getHumanChoice".
-  function getHumanChoice() {
-  let choice;
-  choice = prompt("Welcome to rock-paper-scissors game! Please make your choice:");
-  }
-  
-  getHumanChoice();
-
   // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs.
+  function getHumanChoice() {
+    let choice;
+    choice = prompt("Welcome to rock-paper-scissors game! Please make your choice:");
+
+    if (choice.toLowerCase() === "rock") {
+      return choice;
+    } else if (choice.toLowerCase() === "paper") {
+      return choice;
+    } else if (choice.toLowerCase() === "scissors") {
+      return choice;
+    } else {
+      return choice = prompt (`Please enter a valid entry, choose one of the following:
+      "rock"
+      "paper"
+      "scissors"
+      `);
+    }
+  }
+
 
   // Test what your function returns by using "console.log".
+  console.log(getHumanChoice());
   
