@@ -1,6 +1,6 @@
-// Write the logic to get the computer choice.
-  // Create a new function named "getComputerChoice".
-  // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors".
+// Write the logic to get the computer choice
+  // Create a new function named "getComputerChoice"
+  // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors"
   
   function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
@@ -29,8 +29,8 @@
   }*/
 
 // Write the logic to get the human choice.
-  // Create a new function named "getHumanChoice".
-  // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs.
+  // Create a new function named "getHumanChoice"
+  // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs
   
   function getHumanChoice() {
     let choice = prompt("Choose rock, paper or scissors:");
@@ -52,11 +52,13 @@
       alert ("Please enter a valid entry, choose one of the following:\n'Rock'\n'Paper'\n'Scissors'");
     }*/
 
-  // Test tje function.
+  // Test the function
   console.log(getHumanChoice());
   
 
-// Declare the players score variables.
+// Declare the players score variables
   let humanScore = 0;
   let computerScore = 0;
+
+//Write the logic to play a single round
   
