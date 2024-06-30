@@ -58,48 +58,62 @@
   
 
 // Declare the players score variables.
-  /*let humanScore = 0;
-  let computerScore = 0;*/
+  let humanScore = 0;
+  let computerScore = 0;
 
 // Write the logic to play a single round.
   // Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
-/*function playRound(humanChoice, computerChoice) {
+function playRound(humanChoice, computerChoice) {
     console.log(humanChoice, computerChoice)
 
     if (humanChoice === computerChoice) {
-      alert("It's a tie!");
+      alert(`It's a tie! 
+        Your score: ${humanScore} 
+        Computer score: ${computerScore}`);
     }
 
     if (humanChoice === "rock") {
       if (computerChoice === "scissors") {
-        alert("You win! Rock beats Scissors.");
-        humanScore = humanScore + 1;
+        alert(`You win! Rock beats Scissors. 
+          Your score: ${humanScore += 1}
+          Computer score: ${computerScore}`);
+        //humanScore = humanScore + 1;
       }
       else if (computerChoice === "paper") {
-        alert("You lose! Paper beats Rock.");
-        computerScore = computerScore + 1;
+        alert(`You lose! Paper beats Rock.
+          Your score: ${humanScore}
+          Computer score: ${computerScore += 1}`);
+        //computerScore = computerScore + 1;
       }
     }
     
     if (humanChoice === "paper") {
       if (computerChoice === "rock") {
-        alert("You win! Paper beats Rock.");
-        humanScore = humanScore + 1;
+        alert(`You win! Paper beats Rock.
+          Your score: ${humanScore += 1}
+          Computer score: ${computerScore}`);
+        //humanScore = humanScore + 1;
       }
       else if (computerChoice === "scissors") {
-        alert("You lose! Scissors beats Paper.");
+        alert(`You lose! Scissors beats Paper.
+          Your score: ${humanScore}
+          Computer score: ${computerScore += 1}`);
         computerScore = computerScore + 1;
       }
     }
 
     if (humanChoice === "scissors") {
       if (computerChoice === "paper") {
-        alert("You win! Scissors beats Paper.");
+        alert(`You win! Scissors beats Paper.
+          Your score: ${humanScore += 1}
+          Computer score: ${computerScore}`);
         humanScore = humanScore + 1;
       }
       else if (computerChoice === "rock") {
-        alert("You lose! Rock beats Scissors.");
+        alert(`You lose! Rock beats Scissors.
+          Your score: ${humanScore}
+          Computer score: ${computerScore += 1}`);
         computerScore = computerScore + 1;
       }
     }
@@ -108,7 +122,7 @@
   const humanSelection = getHumanChoice();
   const computerSelection = getComputerChoice();
   
-  playRound(humanSelection, computerSelection);*/
+  playRound(humanSelection, computerSelection);
   
 
 // Write the logic to play the entire game.
@@ -116,54 +130,5 @@
   
 function playGame() {
 
-  let humanScore = 0;
-  let computerScore = 0;
-
-  function playRound(humanChoice, computerChoice) {
-    console.log(humanChoice, computerChoice)
-
-    if (humanChoice === computerChoice) {
-      alert("It's a tie!");
-    }
-
-    if (humanChoice === "rock") {
-      if (computerChoice === "scissors") {
-        alert("You win! Rock beats Scissors.");
-        humanScore = humanScore + 1;
-      }
-      else if (computerChoice === "paper") {
-        alert("You lose! Paper beats Rock.");
-        computerScore = computerScore + 1;
-      }
-    }
-    
-    if (humanChoice === "paper") {
-      if (computerChoice === "rock") {
-        alert("You win! Paper beats Rock.");
-        humanScore = humanScore + 1;
-      }
-      else if (computerChoice === "scissors") {
-        alert("You lose! Scissors beats Paper.");
-        computerScore = computerScore + 1;
-      }
-    }
-
-    if (humanChoice === "scissors") {
-      if (computerChoice === "paper") {
-        alert("You win! Scissors beats Paper.");
-        humanScore = humanScore + 1;
-      }
-      else if (computerChoice === "rock") {
-        alert("You lose! Rock beats Scissors.");
-        computerScore = computerScore + 1;
-      }
-    }
-  }
-  
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
-  
-  playRound(humanSelection, computerSelection);  
-  
 }
 
