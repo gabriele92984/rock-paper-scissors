@@ -82,7 +82,7 @@
       }
     }*/
     
-    if (humanChoice === "paper") {
+    /*if (humanChoice === "paper") {
       if (computerChoice === "rock") {
         alert("You win! Paper beats Rock.");
         humanScore = humanScore + 1;
@@ -91,18 +91,18 @@
         alert("You lose! Scissors beats Paper.");
         computerScore = computerScore + 1;
       }
-    }
+    }*/
 
-    /*if (humanChoice === "rock") {
-      if (computerChoice === "scissors") {
-        alert("You win! Rock beats Scissors.");
+    if (humanChoice === "scissors") {
+      if (computerChoice === "paper") {
+        alert("You win! Scissors beats Paper.");
         humanScore = humanScore + 1;
       }
-      else if (computerChoice === "paper") {
-        alert("You lose! Paper beats Rock.");
+      else if (computerChoice === "rock") {
+        alert("You lose! Rock beats Scissors.");
         computerScore = computerScore + 1;
       }
-    }*/
+    }
   }
   
   const humanSelection = getHumanChoice();
