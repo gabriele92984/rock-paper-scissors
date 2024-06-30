@@ -9,7 +9,7 @@
 }
 
 // Test the function
-  console.log(getComputerChoice());  
+  //console.log(getComputerChoice());  
 
   /*function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -54,7 +54,7 @@
     }*/
 
   // Test the function
-  console.log(getHumanChoice());
+  //console.log(getHumanChoice());
   
 
 // Declare the players score variables
@@ -64,14 +64,24 @@
 //Write the logic to play a single round
   //Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
- /* function playRound(humanChoice, computerChoice) {
+  function playRound(humanChoice, computerChoice) {
+    console.log(humanChoice, computerChoice)
+
     if (humanChoice === computerChoice) {
       alert("It's a tie!");
     }
 
-
-
-
+    if (humanChoice === "rock") {
+      if (computerChoice === "scissors") {
+        alert("You win! Rock beats Scissors.");
+        humanScore = humanScore + 1;
+      }
+      else if (computerChoice === "paper") {
+        alert("You lose! Paper beats Rock.");
+        computerScore = computerScore + 1;
+      }
+    }
+    
 
   }
   
@@ -79,5 +89,3 @@
   const computerSelection = getComputerChoice();
   
   playRound(humanSelection, computerSelection);
-  console.log(playRound());*/
-  
