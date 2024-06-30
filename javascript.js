@@ -1,6 +1,6 @@
-// Write the logic to get the computer choice
-  // Create a new function named "getComputerChoice"
-  // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors"
+// Write the logic to get the computer choice.
+  // Create a new function named "getComputerChoice".
+  // Write the code so that "getComputerChoice" will ramdomly "return" one of the string values: "rock", "paper", "scissors".
   
   function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
@@ -8,7 +8,7 @@
     return choices[randomChoice];
 }
 
-// Test the function
+// Test the function.
   //console.log(getComputerChoice());  
 
   /*function getRandomInt(max) {
@@ -29,8 +29,8 @@
   }*/
 
 // Write the logic to get the human choice.
-  // Create a new function named "getHumanChoice"
-  // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs
+  // Create a new function named "getHumanChoice".
+  // Write the code so that "getHumanChoice" will return one of the valid choices depending on what the user inputs.
   
   function getHumanChoice() {
     let choice = prompt("Choose rock, paper or scissors:");
@@ -57,12 +57,67 @@
   //console.log(getHumanChoice());
   
 
-// Declare the players score variables
+// Declare the players score variables.
+  /*let humanScore = 0;
+  let computerScore = 0;*/
+
+// Write the logic to play a single round.
+  // Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
+
+/*function playRound(humanChoice, computerChoice) {
+    console.log(humanChoice, computerChoice)
+
+    if (humanChoice === computerChoice) {
+      alert("It's a tie!");
+    }
+
+    if (humanChoice === "rock") {
+      if (computerChoice === "scissors") {
+        alert("You win! Rock beats Scissors.");
+        humanScore = humanScore + 1;
+      }
+      else if (computerChoice === "paper") {
+        alert("You lose! Paper beats Rock.");
+        computerScore = computerScore + 1;
+      }
+    }
+    
+    if (humanChoice === "paper") {
+      if (computerChoice === "rock") {
+        alert("You win! Paper beats Rock.");
+        humanScore = humanScore + 1;
+      }
+      else if (computerChoice === "scissors") {
+        alert("You lose! Scissors beats Paper.");
+        computerScore = computerScore + 1;
+      }
+    }
+
+    if (humanChoice === "scissors") {
+      if (computerChoice === "paper") {
+        alert("You win! Scissors beats Paper.");
+        humanScore = humanScore + 1;
+      }
+      else if (computerChoice === "rock") {
+        alert("You lose! Rock beats Scissors.");
+        computerScore = computerScore + 1;
+      }
+    }
+  }
+  
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
+  
+  playRound(humanSelection, computerSelection);*/
+  
+
+// Write the logic to play the entire game.
+  // Your game will play 5 rounds. You will write a function named playGame that calls playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+  
+function playGame() {
+
   let humanScore = 0;
   let computerScore = 0;
-
-//Write the logic to play a single round
-  //Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
   function playRound(humanChoice, computerChoice) {
     console.log(humanChoice, computerChoice)
@@ -108,5 +163,7 @@
   const humanSelection = getHumanChoice();
   const computerSelection = getComputerChoice();
   
-  playRound(humanSelection, computerSelection);
+  playRound(humanSelection, computerSelection);  
   
+}
+
