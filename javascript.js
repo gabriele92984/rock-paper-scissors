@@ -38,6 +38,7 @@
 
     while (choice !== "rock" && choice !== "paper" && choice !== "scissors") {
       choice = prompt("Invalid choice! Please choose 'rock', 'paper', or 'scissors'");
+      choice = choice.toLowerCase();
     }
     return choice;
   }
@@ -63,12 +64,20 @@
 //Write the logic to play a single round
   //Your game will be played round by round. You will write a function that takes the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement.
 
-  function playRound(humanChoice, computerChoice) {
-    // your code here!
+ /* function playRound(humanChoice, computerChoice) {
+    if (humanChoice === computerChoice) {
+      alert("It's a tie!");
+    }
+
+
+
+
+
   }
   
   const humanSelection = getHumanChoice();
   const computerSelection = getComputerChoice();
   
   playRound(humanSelection, computerSelection);
+  console.log(playRound());*/
   
