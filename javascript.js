@@ -1,11 +1,11 @@
-// Write the logic to get the computer choice.
+// Write the logic to get the computer choice
   function getComputerChoice() {
     let choices = ["rock", "paper", "scissors"];
     let randomChoice = Math.floor(Math.random() * choices.length);
     return choices[randomChoice];
 }
 
-// Write the logic to get the human choice.
+// Write the logic to get the human choice
   function getHumanChoice() {
     let choice = prompt("Choose rock, paper or scissors:");
     choice = choice.toLowerCase();
@@ -18,12 +18,12 @@
   }
 
 
-// Declare the players score variables.
+// Declare the players score variables
   let humanScore = 0;
   let computerScore = 0;
   
 
-// Write the logic to play the entire game.
+// Write the logic to play the entire game
   function playGame(n) {
 
     if (n > 0) {
@@ -84,17 +84,17 @@
       playRound(humanSelection, computerSelection);
 
       playGame(n - 1);
-
-      if (humanScore > computerScore) {
-        alert(`Congrats, You are the winner! 
-          Please, refresh the page to make another game.`);
-      } else if (humanScore < computerScore) {
-        alert(`Sorry, the machine is the winner! 
-          Please, refresh the page to make another game.`)
-      } else {
-        alert(`It's a draw! Please, refresh the page and make anothe game.`)
-      }
     }
   }
 
   playGame(5);
+
+  if (humanScore > computerScore) {
+    alert(`Congrats, You are the winner! 
+      Please, refresh the page to make another game.`);
+  } else if (humanScore < computerScore) {
+    alert(`Sorry, the machine is the winner! 
+      Please, refresh the page to make another game.`);
+  } else {
+    alert(`It's a draw! Please, refresh the page and make anothe game.`);
+  }
