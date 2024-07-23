@@ -17,11 +17,9 @@
     return choice;
   }
 
-
 // Declare the players score variables
   let humanScore = 0;
   let computerScore = 0;
-  
 
 // Write the logic to play the entire game
   function playGame(n) {
