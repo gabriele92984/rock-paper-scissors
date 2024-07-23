@@ -58,7 +58,6 @@
             alert(`You lose! Scissors beats Paper.
               Your score: ${humanScore}
               Computer score: ${computerScore += 1}`);
-            computerScore = computerScore + 1;
           }
         }
     
@@ -67,13 +66,11 @@
             alert(`You win! Scissors beats Paper.
               Your score: ${humanScore += 1}
               Computer score: ${computerScore}`);
-            humanScore = humanScore + 1;
           }
           else if (computerChoice === "rock") {
             alert(`You lose! Rock beats Scissors.
               Your score: ${humanScore}
               Computer score: ${computerScore += 1}`);
-            computerScore = computerScore + 1;
           }
         }
       }
@@ -96,5 +93,5 @@
     alert(`Sorry, the machine is the winner! 
       Please, refresh the page to make another game.`);
   } else {
-    alert(`It's a draw! Please, refresh the page and make anothe game.`);
+    alert(`It's a draw! Please, refresh the page to make anothe game.`);
   }
