@@ -1,78 +1,36 @@
-// Write the logic to get the computer choice
-  function getComputerChoice() {
-    let choices = ["rock", "paper", "scissors"];
-    let randomChoice = Math.floor(Math.random() * choices.length);
-    return choices[randomChoice];
+let humanScore = 0;
+let computerScore = 0;
+
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+
+const computerChoice = () => {
+  let choices = ["rock", "paper", "scissors"];
+  let randomChoice = Math.floor(Math.random() * choices.length);
+  return choices[randomChoice];
 }
 
-// Write the logic to get the human choice
-/*
-  function getHumanChoice() {
-    let choice = prompt("Choose rock, paper or scissors:");
-    choice = choice.toLowerCase();
-
-    while (choice !== "rock" && choice !== "paper" && choice !== "scissors") {
-      choice = prompt("Invalid choice! Please choose 'rock', 'paper', or 'scissors'");
-      choice = choice.toLowerCase();
-    }
-    return choice;
+const playRound = (humanSelection, computerSelection) => {
+  if (humanSelection === computerSelection) {
+    return `You tied! You both picked ${humanSelection}`;
+  } else if (humanSelection === "scissors" && computerSelection === "rock") {
+    computerScore++;
+    return "You lost! Rock crushes scissors";
+  } else if (humanSelection === "scissors" && computerSelection === "paper") {
+    humanScore++;
+    return "You won! Scissors cuts paper";
+  } else if (humanSelection === "rock" && computerSelection === "paper") {
+    computerScore++;
+    return "You lost! Paper covers rock";
+  } else if (humanSelection === "rock" && computerSelection === "scissors") {
+    humanScore++;
+    return "You won! Rock crushes scissors";
+  } else if (humanSelection === "paper" && computerSelection === "scissors") {
+    computerScore++;
+    return "You lost! Scissors cuts paper";
+  } else if (humanSelection === "paper" && computerSelection === "rock") {
+    humanScore++;
+    return "You won! Paper covers rock";
   }
-*/
-
-// Declare the players score variables
-  let humanScore = 0;
-  let computerScore = 0;
-
-// Write the logic to play a single game
-  function playRound(humanChoice, computerChoice) {
-
-    if (humanChoice === computerChoice) {
-      alert(`It's a tie! 
-        Your score: ${humanScore} 
-        Computer score: ${computerScore}`);
-    }
-
-    if (humanChoice === "rock") {
-      if (computerChoice === "scissors") {
-        alert(`You win! Rock beats Scissors. 
-          Your score: ${humanScore += 1}
-          Computer score: ${computerScore}`);
-      }
-      else if (computerChoice === "paper") {
-        alert(`You lose! Paper beats Rock.
-          Your score: ${humanScore}
-          Computer score: ${computerScore += 1}`);
-      }
-    }
-    
-    if (humanChoice === "paper") {
-      if (computerChoice === "rock") {
-        alert(`You win! Paper beats Rock.
-          Your score: ${humanScore += 1}
-          Computer score: ${computerScore}`);
-      }
-      else if (computerChoice === "scissors") {
-        alert(`You lose! Scissors beats Paper.
-          Your score: ${humanScore}
-          Computer score: ${computerScore += 1}`);
-      }
-    }
-
-    if (humanChoice === "scissors") {
-      if (computerChoice === "paper") {
-        alert(`You win! Scissors beats Paper.
-          Your score: ${humanScore += 1}
-          Computer score: ${computerScore}`);
-      }
-      else if (computerChoice === "rock") {
-        alert(`You lose! Rock beats Scissors.
-          Your score: ${humanScore}
-          Computer score: ${computerScore += 1}`);
-      }
-    }
-  }
-  
-  const humanSelection = getHumanChoice();
-  const computerSelection = getComputerChoice();
-  
-  playRound(humanSelection, computerSelection);
+}
