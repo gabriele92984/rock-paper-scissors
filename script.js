@@ -34,3 +34,9 @@ const playRound = (humanSelection, computerSelection) => {
     return "You won! Paper covers rock";
   }
 }
+
+rockButton.addEventListener("clic", () =>{
+  const computerSelection = computerChoice();
+  const humanSelection = "rock";
+  playRound(humanSelection, computerSelection);
+})
