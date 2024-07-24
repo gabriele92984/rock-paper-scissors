@@ -13,25 +13,32 @@ const computerChoice = () => {
 
 const playRound = (humanSelection, computerSelection) => {
   if (humanSelection === computerSelection) {
-    return `You tied! You both picked ${humanSelection}`;
+    const p = document.createElement("p");
+    p.innerText = `You tied! You both picked ${humanSelection}`;
   } else if (humanSelection === "scissors" && computerSelection === "rock") {
     computerScore++;
-    return "You lost! Rock crushes scissors";
+    const p = document.createElement("p");
+    p.innerText = "You lost! Rock crushes scissors";
   } else if (humanSelection === "scissors" && computerSelection === "paper") {
     humanScore++;
-    return "You won! Scissors cuts paper";
+    const p = document.createElement("p");
+    p.innerText = "You won! Scissors cuts paper";
   } else if (humanSelection === "rock" && computerSelection === "paper") {
     computerScore++;
-    return "You lost! Paper covers rock";
+    const p = document.createElement("p");
+    p.innerText = "You lost! Paper covers rock";
   } else if (humanSelection === "rock" && computerSelection === "scissors") {
     humanScore++;
-    return "You won! Rock crushes scissors";
+    const p = document.createElement("p");
+    p.innerText = "You won! Rock crushes scissors";
   } else if (humanSelection === "paper" && computerSelection === "scissors") {
     computerScore++;
-    return "You lost! Scissors cuts paper";
+    const p = document.createElement("p");
+    p.innerText = "You lost! Scissors cuts paper";
   } else if (humanSelection === "paper" && computerSelection === "rock") {
     humanScore++;
-    return "You won! Paper covers rock";
+    const p = document.createElement("p");
+    p.innerText = "You won! Paper covers rock";
   }
 }
 
@@ -40,3 +47,16 @@ rockButton.addEventListener("clic", () =>{
   const humanSelection = "rock";
   playRound(humanSelection, computerSelection);
 })
+
+paperButton.addEventListener("clic", () =>{
+  const computerSelection = computerChoice();
+  const humanSelection = "paper";
+  playRound(humanSelection, computerSelection);
+})
+
+scissorsButton.addEventListener("clic", () =>{
+  const computerSelection = computerChoice();
+  const humanSelection = "scissors";
+  playRound(humanSelection, computerSelection);
+}) 
+
