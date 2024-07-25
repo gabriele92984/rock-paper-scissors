@@ -51,21 +51,41 @@ const playRound = (humanSelection, computerSelection) => {
   }
 }
 
+const checkWinner = (humanScore, computerScore) => {
+  if (humanScore === 5) {
+    const h2 = document.createElement("h2");
+    h2.classList.add("player-won");
+    h2.innerText = `You won ${humanScore} to ${computerScore} great job beating the computer!`  
+    outcomeDiv.append(h2);
+  }
+  
+  if (computerScore === 5) {
+    const h2 = document.createElement("h2");
+    h2.classList.add("computer-won");
+    h2.innerText = `You lost ${humanScore} to ${computerScore} the computer beat you!`  
+    outcomeDiv.append(h2);
+  }
+  
+}
+
 rockButton.addEventListener("click", () =>{
   const computerSelection = computerChoice();
   const humanSelection = "rock";
   playRound(humanSelection, computerSelection);
+  checkWinner(humanScore, computerScore);
 })
 
 paperButton.addEventListener("click", () =>{
   const computerSelection = computerChoice();
   const humanSelection = "paper";
   playRound(humanSelection, computerSelection);
+  checkWinner(humanScore, computerScore);
 })
 
 scissorsButton.addEventListener("click", () =>{
   const computerSelection = computerChoice();
   const humanSelection = "scissors";
   playRound(humanSelection, computerSelection);
+  checkWinner(humanScore, computerScore);
 }) 
 
